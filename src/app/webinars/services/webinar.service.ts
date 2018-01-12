@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 import { Webinar } from '../models/webinar';
+import { Pager } from '../models/pager';
 
 @Injectable()
 export class WebinarService {
@@ -12,7 +13,7 @@ export class WebinarService {
   constructor(private http: HttpClient) {
   }
 
-  getWebinars(): Observable<Webinar[]> {
-    return this.http.get<Webinar[]>(this.webinarsUrl);
+  getWebinars(): Observable<Pager<Webinar>> {
+    return this.http.get<Pager<Webinar>>(this.webinarsUrl);
   }
 }

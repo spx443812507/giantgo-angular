@@ -1,5 +1,5 @@
 <ul class="webinars">
-  <li *ngFor="let webinar of webinars" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  <li *ngFor="let webinar of webinars">
+    <span class="badge">{{webinar.id}}</span> {{webinar.title}}
   </li>
 </ul>

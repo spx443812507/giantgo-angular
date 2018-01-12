@@ -19,6 +19,6 @@ export class ListComponent implements OnInit {
 
   getWebinars(): void {
     this.webinarService.getWebinars()
-      .subscribe(webinars => this.webinars = webinars);
+      .subscribe(pager => this.webinars = pager.data);
   }
 }
